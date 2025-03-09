@@ -1,0 +1,19 @@
+.button {
+  padding: 10px;
+  color: $bg-brand;
+  cursor: pointer;
+  border: 1px solid $bg-brand;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+
+  &:active {
+    color: $bg-hover-primary;
+    border-color: $bg-hover-primary;
+    scale: 0.95;
+  }
+
+  &:hover {
+    color: $bg-hover-primary;
+    border-color: $bg-hover-primary;
+  }
+}
