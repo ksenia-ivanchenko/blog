@@ -7,11 +7,20 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "eslint": "eslint",
     "eslint:fix": "eslint --fix",
     "stylelint": "stylelint '**/*.{css,scss}' --allow-empty-input",
     "stylelint:fix": "stylelint '**/*.{css,scss}' --fix",
-    "lint": "eslint && stylelint"
+    "lint": "eslint && stylelint",
+    "lint:fix": "eslint:fix && stylelint:fix",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": "npx eslint --fix",
+    "**/*.{css,scss}": "npx stylelint --fix"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -30,12 +39,15 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.4.3",
     "prettier": "^3.5.3",
     "stylelint": "^16.15.0",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-recess-order": "^6.0.0",
     "stylelint-config-standard-scss": "^14.0.0",
     "stylelint-order": "^6.0.4",
+    "stylelint-prettier": "^5.0.3",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0",

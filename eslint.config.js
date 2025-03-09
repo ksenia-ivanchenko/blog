@@ -6,7 +6,7 @@ import tseslint from 'typescript-eslint';
 import eslintPluginPrettier from 'eslint-plugin-prettier';
 
 export default tseslint.config(
-  { ignores: ['dist'] },
+  { ignores: ['dist', 'node_modules/', 'build/'] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ['**/*.{ts,tsx}'],
@@ -26,6 +26,7 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
       'prettier/prettier': 'warn',
+      'no-undef': 'error',
     },
   }
 );
