@@ -1,0 +1,21 @@
+.link {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: $text-secondary;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $bg-brand;
+  }
+
+  &:active {
+    color: $bg-brand;
+  }
+}
+
+.linkActive {
+  color: $bg-brand;
+}
