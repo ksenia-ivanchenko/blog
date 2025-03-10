@@ -1,1 +1,1 @@
-export { PostHeading } from './post';
+export { PostHeading, getPostApi, type Post } from './post';

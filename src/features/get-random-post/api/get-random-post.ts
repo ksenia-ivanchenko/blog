@@ -1,4 +1,4 @@
-import { getPostApi } from '@shared';
+import { getPostApi } from '@entities';
 
 export const getRandomPostApi = async () => {
   const randomId = Math.floor(Math.random() * 100) + 1;

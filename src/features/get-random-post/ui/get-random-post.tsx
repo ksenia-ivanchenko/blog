@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Button, Post } from '@shared';
+import { Button } from '@shared';
 import { getRandomPostApi } from '../api/get-random-post';
-import { PostHeading } from '@entities';
+import { PostHeading, Post } from '@entities';
 import styles from './get-random-post.module.scss';
 
 export const GetRandomPost = () => {
