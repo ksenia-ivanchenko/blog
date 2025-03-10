@@ -1,11 +1,11 @@
-.card {
+.content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: center;
   justify-content: center;
+  min-height: 70px;
 }
 
-.heading {
-  font-size: 70px;
+.button {
+  width: 200px;
 }
