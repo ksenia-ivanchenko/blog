@@ -1,1 +1,1 @@
-export const PostHeading = () => <></>;
+export const PostHeading = () => <h2></h2>;

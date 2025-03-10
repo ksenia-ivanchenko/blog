@@ -1,1 +1,3 @@
-export const RandomPost = () => <></>;
+import { PostCard } from '@widgets';
+
+export const RandomPost = () => <PostCard></PostCard>;

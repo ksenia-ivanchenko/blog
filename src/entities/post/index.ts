@@ -1,1 +1,1 @@
-export * from './components';
+export { PostHeading } from './components';
