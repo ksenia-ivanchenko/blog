@@ -1,7 +1,8 @@
 import { getPostApi } from '@entities';
+import { postsCount } from '../const/const';
 
 export const getRandomPostApi = async () => {
-  const randomId = Math.floor(Math.random() * 100) + 1;
+  const randomId = Math.floor(Math.random() * postsCount) + 1;
   try {
     const response = await getPostApi(randomId);
     return response.data;

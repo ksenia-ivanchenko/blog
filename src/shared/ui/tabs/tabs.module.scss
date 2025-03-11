@@ -3,19 +3,19 @@
   display: flex;
   gap: 20px;
   align-items: center;
-  color: $text-secondary;
+  color: var(--text-secondary);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    color: $bg-brand;
+    color: var(--bg-brand);
   }
 
   &:active {
-    color: $bg-brand;
+    color: var(--bg-brand);
   }
 }
 
 .linkActive {
-  color: $bg-brand;
+  color: var(--bg-brand);
 }

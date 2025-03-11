@@ -15,5 +15,5 @@
   height: 110%;
   pointer-events: none;
   content: '';
-  border-right: 1px solid $text-secondary;
+  border-right: 1px solid var(--text-secondary);
 }
