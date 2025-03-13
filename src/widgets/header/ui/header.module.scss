@@ -1,0 +1,19 @@
+.tabs {
+  display: flex;
+  gap: 100px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.tabs > *:not(:last-child)::after {
+  position: absolute;
+  right: -50px;
+  height: 110%;
+  pointer-events: none;
+  content: '';
+  border-right: 1px solid var(--text-secondary);
+}

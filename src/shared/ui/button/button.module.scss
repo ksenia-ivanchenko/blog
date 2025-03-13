@@ -1,0 +1,19 @@
+.button {
+  padding: 10px;
+  color: var(--bg-brand);
+  cursor: pointer;
+  border: 1px solid var(--bg-brand);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+
+  &:active {
+    color: var(--bg-hover-primary);
+    border-color: var(--bg-hover-primary);
+    scale: 0.95;
+  }
+
+  &:hover {
+    color: var(--bg-hover-primary);
+    border-color: var(--bg-hover-primary);
+  }
+}
