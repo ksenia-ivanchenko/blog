@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router';
 import { useRef } from 'react';
-import { Button, DetailsIcon, EyeIcon, Input } from '@shared';
+import { Button, DetailsIcon, Input } from '@shared';
+import { InterestingFacts } from '@widgets';
 import styles from './landing.module.scss';
 
 export const Landing = () => {
@@ -15,41 +16,35 @@ export const Landing = () => {
     <div className={styles.exampleHomework}>
       <h1 className={styles.visuallyHidden}>Страница Landing</h1>
 
-      <div className={styles.screen}>
-        <h2>Интересные факты про эту страницу</h2>
+      <InterestingFacts handleScroll={handleScroll} />
 
-        <p>В ней нет смысла</p>
-        <Button onClick={handleScroll}>
-          Перейти дальше
-          <EyeIcon />
-        </Button>
-      </div>
-
-      <div
+      <section
         className={styles.screen}
         ref={secondScreenRef}
         style={{ backgroundColor: '#e0e0e0' }}
       >
         <h2>Смотрите какие карточки</h2>
-        <div className={styles.cardsContainer}>
-          <div className={styles.card}>
-            <h4>Карточка 1</h4>
-            <p>Пустота</p>
-          </div>
-          <div className={styles.card}>
-            <h4>Карточка 2</h4> <p>Пустота</p>
-          </div>
-        </div>
-      </div>
 
-      <div className={styles.block}>
+        <ul className={styles.cardsContainer}>
+          <li className={styles.card}>
+            <h3>Карточка 1</h3>
+            <p>Пустота</p>
+          </li>
+          <li className={styles.card}>
+            <h3>Карточка 2</h3>
+            <p>Пустота</p>
+          </li>
+        </ul>
+      </section>
+
+      <section className={styles.block}>
         <h2>Интерактив?</h2>
         <Input type="text" placeholder="Напишите тут что-нибудь" />
         <Button onClick={() => navigate('#')}>
           Вывести текст в alert
           <DetailsIcon />
         </Button>
-      </div>
+      </section>
     </div>
   );
 };

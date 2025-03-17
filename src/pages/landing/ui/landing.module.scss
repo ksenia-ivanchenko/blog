@@ -17,17 +17,6 @@
   clip: rect(0, 0, 0, 0);
 }
 
-.screen {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding: 20px;
-  text-align: center;
-}
-
 .block {
   box-sizing: border-box;
   display: flex;
