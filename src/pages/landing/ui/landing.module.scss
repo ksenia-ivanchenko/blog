@@ -29,20 +29,3 @@
   padding: 20px;
   text-align: center;
 }
-
-.cardsContainer {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.card {
-  width: 300px;
-  padding: 20px;
-  margin: 20px;
-  overflow: hidden;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
-}

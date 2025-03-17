@@ -1,12 +1,17 @@
 import { useNavigate } from 'react-router';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Button, DetailsIcon, Input } from '@shared';
-import { InterestingFacts } from '@widgets';
+import { CardsList, InterestingFacts } from '@widgets';
 import styles from './landing.module.scss';
+import { CardType } from 'entities';
 
 export const Landing = () => {
   const navigate = useNavigate();
   const secondScreenRef = useRef<HTMLDivElement | null>(null);
+  const [cards] = useState<CardType[]>([
+    { title: 'Карточка 1', text: 'Пустота' },
+    { title: 'Карточка 2', text: 'Пустота' },
+  ]);
 
   const handleScroll = () => {
     secondScreenRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -17,25 +22,7 @@ export const Landing = () => {
       <h1 className={styles.visuallyHidden}>Страница Landing</h1>
 
       <InterestingFacts handleScroll={handleScroll} />
-
-      <section
-        className={styles.screen}
-        ref={secondScreenRef}
-        style={{ backgroundColor: '#e0e0e0' }}
-      >
-        <h2>Смотрите какие карточки</h2>
-
-        <ul className={styles.cardsContainer}>
-          <li className={styles.card}>
-            <h3>Карточка 1</h3>
-            <p>Пустота</p>
-          </li>
-          <li className={styles.card}>
-            <h3>Карточка 2</h3>
-            <p>Пустота</p>
-          </li>
-        </ul>
-      </section>
+      <CardsList cards={cards} ref={secondScreenRef} />
 
       <section className={styles.block}>
         <h2>Интерактив?</h2>

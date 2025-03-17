@@ -1,0 +1,9 @@
+.screen {
+  @include screen;
+}
+
+.cardsContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
