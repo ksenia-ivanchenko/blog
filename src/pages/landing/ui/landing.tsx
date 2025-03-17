@@ -1,16 +1,14 @@
-import { useNavigate } from 'react-router';
 import { useRef, useState } from 'react';
-import { Button, DetailsIcon, Input } from '@shared';
 import { CardsList, InterestingFacts } from '@widgets';
+import { CardType } from '@entities';
+import { AlertInputText } from '@features';
 import styles from './landing.module.scss';
-import { CardType } from 'entities';
 
 export const Landing = () => {
-  const navigate = useNavigate();
   const secondScreenRef = useRef<HTMLDivElement | null>(null);
   const [cards] = useState<CardType[]>([
-    { title: 'Карточка 1', text: 'Пустота' },
-    { title: 'Карточка 2', text: 'Пустота' },
+    { title: 'Карточка 1', text: 'Пустота', id: '1' },
+    { title: 'Карточка 2', text: 'Пустота', id: '2' },
   ]);
 
   const handleScroll = () => {
@@ -23,15 +21,7 @@ export const Landing = () => {
 
       <InterestingFacts handleScroll={handleScroll} />
       <CardsList cards={cards} ref={secondScreenRef} />
-
-      <section className={styles.block}>
-        <h2>Интерактив?</h2>
-        <Input type="text" placeholder="Напишите тут что-нибудь" />
-        <Button onClick={() => navigate('#')}>
-          Вывести текст в alert
-          <DetailsIcon />
-        </Button>
-      </section>
+      <AlertInputText />
     </div>
   );
 };

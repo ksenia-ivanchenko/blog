@@ -17,7 +17,7 @@ export const CardsList = forwardRef<HTMLDivElement, CardsListProps>(
 
       <ul className={styles.cardsContainer}>
         {cards.map((card) => (
-          <li>
+          <li key={card.id}>
             <Card card={card} />
           </li>
         ))}
