@@ -20,4 +20,9 @@
     color: var(--bg-hover-primary);
     border-color: var(--bg-hover-primary);
   }
+
+  &:focus-visible {
+    color: var(--bg-hover-primary);
+    border-color: var(--bg-hover-primary);
+  }
 }

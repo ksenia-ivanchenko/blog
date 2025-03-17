@@ -1,3 +1,5 @@
 .screen {
   @include screen;
+
+  gap: 20px;
 }

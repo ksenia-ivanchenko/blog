@@ -1,19 +1,31 @@
 .tabs {
   display: flex;
-  gap: 100px;
+  gap: 20px;
+
+  @include tablet {
+    gap: 100px;
+  }
 }
 
 .header {
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: 40px 5px;
+
+  @include tablet {
+    padding: 40px;
+  }
 }
 
 .tabs > *:not(:last-child)::after {
   position: absolute;
-  right: -50px;
+  right: -10px;
   height: 110%;
   pointer-events: none;
   content: '';
   border-right: 1px solid var(--text-secondary);
+
+  @include tablet {
+    right: -50px;
+  }
 }
