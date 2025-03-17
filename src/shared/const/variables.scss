@@ -1,6 +1,13 @@
 :root {
   --bg-brand: rgb(77 124 19);
+  --bg-secondary: rgb(243 244 246 / 100%);
   --text-secondary: rgb(63 81 52);
   --main-font: monospace, serif;
   --bg-hover-primary: rgb(128 199 61);
+  --text-tertiary: rgb(99 112 131 / 100%);
+  --text-error: rgb(246 76 76 / 100%);
+  --border-light: 1px solid rgb(206 210 218 / 100%);
+  --input-hover-border: 1px solid rgb(151 161 175 / 100%);
+  --border-indicator-focused: 2px solid rgb(108 196 61);
+  --border-indicator-error: 2px solid rgb(246 76 76 / 100%);
 }

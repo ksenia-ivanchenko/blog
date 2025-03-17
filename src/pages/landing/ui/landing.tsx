@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router';
-import { DetailsIcon, EyeIcon } from '@shared';
+import { Button, DetailsIcon, EyeIcon, Input } from '@shared';
 // import styles from './landing.module.scss';
 
 export const Landing = () => {
@@ -11,10 +11,10 @@ export const Landing = () => {
         <h2>Интересные факты про эту страницу</h2>
 
         <p>В ней нет смысла</p>
-        <button onClick={() => navigate('#second-screen')}>
+        <Button onClick={() => navigate('#second-screen')}>
           Перейти дальше
           <EyeIcon />
-        </button>
+        </Button>
       </div>
 
       <div
@@ -22,7 +22,7 @@ export const Landing = () => {
         id="second-screen"
         style={{ backgroundColor: '#e0e0e0' }}
       >
-        <h3>Смотрите какие карточки</h3>
+        <h2>Смотрите какие карточки</h2>
         <div className="cards-container">
           <div className="card">
             <h4>Карточка 1</h4>
@@ -35,12 +35,12 @@ export const Landing = () => {
       </div>
 
       <div className="block">
-        <h5>Интерактив?</h5>
-        <input type="text" placeholder="Напишите тут что-нибудь" />
-        <button onClick={() => navigate('#')}>
+        <h2>Интерактив?</h2>
+        <Input type="text" placeholder="Напишите тут что-нибудь" />
+        <Button onClick={() => navigate('#')}>
           Вывести текст в alert
           <DetailsIcon />
-        </button>
+        </Button>
       </div>
     </div>
   );
