@@ -1,6 +1,6 @@
 import { routes, Route } from './routes';
 
-type NavigationItem = {
+export type NavigationItem = {
   name: string;
   text: string;
   children: Array<Route | NavigationItem>;
