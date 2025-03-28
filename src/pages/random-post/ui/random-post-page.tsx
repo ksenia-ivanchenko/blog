@@ -1,7 +1,7 @@
 import { PostCard } from '@widgets';
-import styles from './random-post.module.scss';
+import styles from './random-post-page.module.scss';
 
-export const RandomPost = () => (
+export const RandomPostPage = () => (
   <div className={styles.page}>
     <PostCard />
   </div>

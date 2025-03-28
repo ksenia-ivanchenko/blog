@@ -1,1 +1,1 @@
-export { RandomPost } from './ui/random-post';
+export { RandomPostPage } from './ui/random-post-page';

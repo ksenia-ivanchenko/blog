@@ -10,18 +10,23 @@
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 
-  &:active {
+  &:focus-visible {
+    color: var(--bg-hover-primary);
+    border-color: var(--bg-hover-primary);
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &:active:not(:disabled) {
     color: var(--bg-hover-primary);
     border-color: var(--bg-hover-primary);
     scale: 0.95;
   }
 
-  &:hover {
-    color: var(--bg-hover-primary);
-    border-color: var(--bg-hover-primary);
-  }
-
-  &:focus-visible {
+  &:hover:not(:disabled) {
     color: var(--bg-hover-primary);
     border-color: var(--bg-hover-primary);
   }

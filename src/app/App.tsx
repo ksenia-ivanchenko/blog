@@ -1,7 +1,7 @@
 import { routes } from '@shared';
 import { Layout } from './layout/layout';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { MainPage, RandomPost, Landing } from '@pages';
+import { MainPage, RandomPostPage, LandingPage } from '@pages';
 import './index.scss';
 
 const router = createBrowserRouter([
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     path: routes.randomPost.getLink(),
     element: (
       <Layout>
-        <RandomPost />
+        <RandomPostPage />
       </Layout>
     ),
   },
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
     path: routes.landing.getLink(),
     element: (
       <Layout>
-        <Landing />
+        <LandingPage />
       </Layout>
     ),
   },
