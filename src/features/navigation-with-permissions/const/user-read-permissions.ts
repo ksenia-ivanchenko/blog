@@ -4,4 +4,5 @@ export enum USER_READ_PERMISSIONS {
   'candidates',
   'clients',
   'partners',
+  'events',
 }

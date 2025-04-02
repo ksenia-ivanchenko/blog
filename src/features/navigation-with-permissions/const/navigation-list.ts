@@ -14,7 +14,19 @@ export const navigationList: Array<NavigationItem> = [
       {
         name: 'job',
         text: 'Работа',
-        children: [routes.vacancies, routes.candidates],
+        children: [
+          {
+            name: 'users',
+            text: 'Пользователи',
+            children: [
+              {
+                name: 'inner-users',
+                text: 'Внутренние пользователи',
+                children: [routes.vacancies, routes.candidates],
+              },
+            ],
+          },
+        ],
       },
       {
         name: 'news',

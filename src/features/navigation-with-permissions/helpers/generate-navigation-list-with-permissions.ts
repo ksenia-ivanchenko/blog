@@ -5,7 +5,7 @@ import { isNavigationItems, isRoutes } from './type-guards';
 export const generateNavigationListWithPermissions = (
   navigationList: Array<NavigationItem>,
   checkPermission: (routeName: string) => boolean
-) => {
+): Array<NavigationItem> => {
   const permissions = [];
 
   for (const item of navigationList) {

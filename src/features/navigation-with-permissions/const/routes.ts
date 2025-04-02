@@ -34,6 +34,6 @@ export const routes: Record<string, Route> = {
     name: 'partners',
     pathname: 'partners',
     getLink: () => '/partners',
-    text: 'Клиенты',
+    text: 'Партнеры',
   },
 };
