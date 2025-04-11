@@ -1,4 +1,4 @@
-import { getPostApi } from '@entities';
+import { getPostApi } from '@entities/post';
 import { postsCount } from '../const/const';
 
 export const getRandomPostApi = async () => {
