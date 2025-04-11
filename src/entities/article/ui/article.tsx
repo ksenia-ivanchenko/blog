@@ -9,10 +9,12 @@ type ArticleCardProps = {
 export const ArticleCard = ({ article, deleteArticle }: ArticleCardProps) => {
   const { id, title, content } = article;
 
+  console.log(content);
+
   const handleClick = () => deleteArticle(id);
 
   return (
-    <li key={id} className={styles.card}>
+    <li className={styles.card}>
       <button type="button" onClick={handleClick}>
         Удалить
       </button>

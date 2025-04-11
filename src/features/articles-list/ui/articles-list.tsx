@@ -8,8 +8,6 @@ export const ArticlesList = () => {
     queryFn: articleAPI.getArticles,
   });
 
-  console.log(articles);
-
   const { mutate: deleteArticle } = useMutation({
     mutationFn: articleAPI.deleteArticle,
   });
@@ -21,7 +19,11 @@ export const ArticlesList = () => {
   return (
     <ul className={styles.list}>
       {articles.map((item) => (
-        <ArticleCard article={item} deleteArticle={deleteArticle} />
+        <ArticleCard
+          article={item}
+          deleteArticle={deleteArticle}
+          key={item.id}
+        />
       ))}
     </ul>
   );
