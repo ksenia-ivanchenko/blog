@@ -1,9 +1,4 @@
-export type Route = {
-  name: string;
-  pathname: string;
-  getLink: () => string;
-  text: string;
-};
+import { Route } from '@features/navigation';
 
 export const routes: Record<string, Route> = {
   vacancies: {

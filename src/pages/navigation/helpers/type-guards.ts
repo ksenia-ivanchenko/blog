@@ -1,8 +1,7 @@
 import { NavigationItem } from '../const/navigation-list';
 import { Route } from '../const/routes';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function isRoutes(children: any): children is Route[] {
+export function isRoutes(children: unknown): children is Route[] {
   return (
     Array.isArray(children) &&
     typeof children[0].name === 'string' &&
@@ -12,8 +11,9 @@ export function isRoutes(children: any): children is Route[] {
   );
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function isNavigationItems(children: any): children is NavigationItem[] {
+export function isNavigationItems(
+  children: unknown
+): children is NavigationItem[] {
   return (
     Array.isArray(children) &&
     'name' in children[0] &&

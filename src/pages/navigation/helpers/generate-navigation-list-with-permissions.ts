@@ -1,11 +1,9 @@
-import { NavigationItem } from '../const/navigation-list';
-import { Route } from '../const/routes';
+import { NavigationItem, Route } from '@features/navigation';
+import { navigationList } from '../const/navigation-list';
+import { checkHasUserPermission } from './check-has-user-permission';
 import { isNavigationItems, isRoutes } from './type-guards';
 
-export const generateNavigationListWithPermissions = (
-  navigationList: Array<NavigationItem>,
-  checkPermission: (routeName: string) => boolean
-): Array<NavigationItem> => {
+export const generateNavigationListWithPermissions = (): NavigationItem[] => {
   const permissions = [];
 
   for (const item of navigationList) {
@@ -27,14 +25,14 @@ export const generateNavigationListWithPermissions = (
 
     if (isRoutes(children)) {
       result = children.filter((route) => {
-        const hasAccess = checkPermission(route.name);
+        const hasAccess = checkHasUserPermission(route.name);
         return hasAccess ? route : null;
       });
     }
 
     if (isNavigationItems(children)) {
       result = children.reduce(
-        (acc: Array<NavigationItem>, item: NavigationItem) => {
+        (acc: NavigationItem[], item: NavigationItem) => {
           const { children: nextLevelChildren } = item;
           const filteredChildren = getAccessRoutes(nextLevelChildren);
 

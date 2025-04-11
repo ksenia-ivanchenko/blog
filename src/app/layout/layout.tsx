@@ -1,4 +1,4 @@
-import { Header } from '@widgets';
+import { Header } from '@widgets/header';
 import styles from './layout.module.scss';
 
 export const Layout = ({ children }) => (

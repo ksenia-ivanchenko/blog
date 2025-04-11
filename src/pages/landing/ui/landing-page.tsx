@@ -1,8 +1,9 @@
 import { useRef, useState } from 'react';
-import { CardsList, InterestingFacts } from '@widgets';
-import { CardType } from '@entities';
-import { AlertInputText } from '@features';
+import { CardsList } from '@widgets/cards-list';
+import { CardType } from '@entities/card';
+import { AlertInputText } from '@features/alert-input-text';
 import styles from './landing-page.module.scss';
+import { InterestingFacts } from '@widgets/interesting-facts';
 
 export const LandingPage = () => {
   const secondScreenRef = useRef<HTMLDivElement | null>(null);

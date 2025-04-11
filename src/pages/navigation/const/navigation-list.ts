@@ -1,10 +1,5 @@
-import { routes, Route } from './routes';
-
-export type NavigationItem = {
-  name: string;
-  text: string;
-  children: Array<Route | NavigationItem>;
-};
+import { NavigationItem } from '@features/navigation';
+import { routes } from './routes';
 
 export const navigationList: Array<NavigationItem> = [
   {

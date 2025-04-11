@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { Card, CardType } from '@entities';
+import { Card, CardType } from '@entities/card';
 import styles from './cards-list.module.scss';
 
 type CardsListProps = {

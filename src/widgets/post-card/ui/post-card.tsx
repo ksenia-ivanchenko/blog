@@ -1,4 +1,4 @@
-import { GetRandomPost } from '@features';
+import { GetRandomPost } from '@features/get-random-post';
 import styles from './post-card.module.scss';
 
 export const PostCard = () => (

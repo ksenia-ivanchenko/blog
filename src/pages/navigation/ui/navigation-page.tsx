@@ -1,20 +1,13 @@
-import {
-  checkHasUserPermission,
-  generateNavigationListWithPermissions,
-  navigationList,
-  NavigationWithPermissions,
-} from '@features';
+import { Navigation } from '@features/navigation';
 import styles from './navigation-page.module.scss';
+import { generateNavigationListWithPermissions } from '../helpers/generate-navigation-list-with-permissions';
 
 export const NavigationPage = () => {
-  const navigationListWithPermission = generateNavigationListWithPermissions(
-    navigationList,
-    checkHasUserPermission
-  );
+  const navigationListWithPermission = generateNavigationListWithPermissions();
 
   return (
     <div className={styles.content}>
-      <NavigationWithPermissions items={navigationListWithPermission} />
+      <Navigation items={navigationListWithPermission} />
     </div>
   );
 };
