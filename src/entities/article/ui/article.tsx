@@ -1,3 +1,4 @@
+import { Button } from '@shared';
 import { Article } from '../api/types';
 import styles from './article.module.scss';
 
@@ -8,29 +9,25 @@ type ArticleCardProps = {
 
 export const ArticleCard = ({ article, deleteArticle }: ArticleCardProps) => {
   const { id, title, content } = article;
-
-  console.log(content);
-
   const handleClick = () => deleteArticle(id);
 
   return (
     <li className={styles.card}>
-      <button type="button" onClick={handleClick}>
+      <Button type="button" onClick={handleClick}>
         Удалить
-      </button>
-      <p>id: {id}</p>
-      <p>заголовок: {title}</p>
-      <p>тип: {content.type}</p>
+      </Button>
+      <h3>{title}</h3>
+      <span className={styles.id}>id: {id}</span>
       <div>
         {content.type === 'draft' ? (
-          <div>
-            <p>Черновик</p>
-          </div>
+          <p className={styles.published}>Черновик</p>
         ) : (
-          <div>
-            <p>Опубликована {content.isNew && 'Новая статья'}</p>
+          <>
+            <p className={styles.published}>
+              Опубликована {content.isNew && 'новая статья'}
+            </p>
             <p>{content.description}</p>
-          </div>
+          </>
         )}
       </div>
     </li>
