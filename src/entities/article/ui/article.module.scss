@@ -1,0 +1,29 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 300px;
+  padding: 12px;
+  border: var(--border-light);
+  border-radius: 10px;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    border: var(--input-hover-border);
+    scale: 1.01;
+  }
+
+  &:active {
+    border: var(--input-hover-border);
+    scale: 1.01;
+  }
+}
+
+.id {
+  font-size: 10px;
+  color: var(--text-tertiary);
+}
+
+.published {
+  color: var(--bg-brand);
+}

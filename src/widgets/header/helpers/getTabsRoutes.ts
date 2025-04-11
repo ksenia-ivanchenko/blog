@@ -6,5 +6,6 @@ export const getTabsRoutes = () => {
     { path: routes.randomPost.getLink(), name: 'Рандомный пост' },
     { path: routes.landing.getLink(), name: 'Landing' },
     { path: routes.navigation.getLink(), name: 'Навигация с правами доступа' },
+    { path: routes.articles.getLink(), name: 'Карточки' },
   ];
 };
