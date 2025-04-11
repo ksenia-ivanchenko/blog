@@ -8,6 +8,8 @@ interface Routes {
   randomPost: Route;
   landing: Route;
   navigation: Route;
+  articles: Route;
+  createArticle: Route;
 }
 
 export const routes: Routes = {
@@ -26,5 +28,13 @@ export const routes: Routes = {
   navigation: {
     getLink: () => '/navigation',
     pathname: '/navigation',
+  },
+  articles: {
+    getLink: () => '/articles',
+    pathname: '/articles',
+  },
+  createArticle: {
+    getLink: () => '/create-article',
+    pathname: '/create-article',
   },
 };
