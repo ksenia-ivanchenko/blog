@@ -31,10 +31,6 @@ export const ArticlesList = () => {
     return <div>Произошла ошибка при загрузке данных.</div>;
   }
 
-  if (status !== 'success') {
-    return null;
-  }
-
   return (
     <div className={styles.content}>
       <ul className={styles.list}>
@@ -46,6 +42,7 @@ export const ArticlesList = () => {
           />
         ))}
       </ul>
+      {!articles.length && <div>Тут пока ничего нет</div>}
       {isMutating && <div>Загрузка...</div>}
     </div>
   );
